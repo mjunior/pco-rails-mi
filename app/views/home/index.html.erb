@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="">
+                    <label class="radio-inline"><input type="radio" value="agency" name="type">Agências</label>
+                    <label class="radio-inline"><input type="radio" value="destination" name="type">Destinos</label>
+                    <label class="radio-inline"><input type="radio" value="institution" name="type">Escolas</label>
+                    <input type="text" name="search" id="myInput" placeholder="Search for names..">
+                    
+                    <input class="btn btn-default pull-right" type="submit" value="Buscar" style="margin-bottom:15px;"> 
+            </form>
+                <table id="myTable">
+                <tr class="header">
+                    <th style="width:60%;">Name</th>
+                </tr>
+                <% @institutions.each do |institution| %>
+                    <tr class="show_lines">
+                        <td colspan="2"> <%= institution["title"]  %> </td>
+                    </tr>
+                <% end %>
+                </table>
+        </div>
+    </div>
+</div>
